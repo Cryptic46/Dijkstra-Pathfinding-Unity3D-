@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class Agent : MonoBehaviour
 {
-    private BreadthFirstSearch pathfinder;
+    private Dijkstra pathfinder;
     public Vector2 currentPath;
     public bool setCurrentPath = false;
     private Vector3 travel;
 
     void Start ()
     {
-        pathfinder = GameObject.Find("Player").GetComponent<BreadthFirstSearch>();
+        pathfinder = GameObject.Find("Player").GetComponent<Dijkstra>();
     }
 
 	void Update ()

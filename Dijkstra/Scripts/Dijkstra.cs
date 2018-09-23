@@ -8,7 +8,7 @@ using UnityEngine;
  * Problem: Run the demo, check node Vector(0.5, 1.5, -0.5)
  */
 
-public class BreadthFirstSearch : MonoBehaviour
+public class Dijkstra : MonoBehaviour
 {
     //Node collection data
     [HideInInspector]
@@ -44,7 +44,7 @@ public class BreadthFirstSearch : MonoBehaviour
     private int newCost;
     private Dictionary<Vector2, int> nodeCostMap;
     private HashSet<Vector2> costSoFarHash;
-    
+
     //Outer most list contains the cost and the sub-list contains the index of the prioritized node from priorityNodes
     private List<List<int>> priorityNodeIndexMap;
     private List<Vector2> priorityNodes;
@@ -89,7 +89,7 @@ public class BreadthFirstSearch : MonoBehaviour
 
     private void GetTileCollection()
     {
-        for(int i = 0; i < gridContainer.childCount; ++i)
+        for (int i = 0; i < gridContainer.childCount; ++i)
         {
             walkableTilesHashSet.Add(gridContainer.GetChild(i).position);
         }
@@ -100,11 +100,11 @@ public class BreadthFirstSearch : MonoBehaviour
         List<Vector2> neighborsCollection = new List<Vector2>();
         Vector2 checkNeighbor;
 
-        for(int i = 0; i < neighborDirection.Count; ++i)
+        for (int i = 0; i < neighborDirection.Count; ++i)
         {
             checkNeighbor = current + neighborDirection[i];
 
-            if(walkableTilesHashSet.Contains(checkNeighbor) || highCostTilesHashSet.Contains(checkNeighbor))
+            if (walkableTilesHashSet.Contains(checkNeighbor) || highCostTilesHashSet.Contains(checkNeighbor))
             {
                 neighborsCollection.Add(checkNeighbor);
             }
@@ -115,7 +115,7 @@ public class BreadthFirstSearch : MonoBehaviour
 
     private void SetHighCostTiles()
     {
-        for(int i = 0; i < highCostTileContainer.childCount; ++i)
+        for (int i = 0; i < highCostTileContainer.childCount; ++i)
         {
             highCostTilesHashSet.Add(highCostTileContainer.GetChild(i).position);
         }
@@ -123,7 +123,7 @@ public class BreadthFirstSearch : MonoBehaviour
 
     private int Cost(Vector2 neighboringNode)
     {
-        if(highCostTilesHashSet.Contains(neighboringNode))
+        if (highCostTilesHashSet.Contains(neighboringNode))
         {
             return 1;
         }
@@ -235,7 +235,7 @@ public class BreadthFirstSearch : MonoBehaviour
         }
     }
 
-	void Start ()
+    void Start()
     {
         ObjectInitializer();
 
@@ -246,11 +246,11 @@ public class BreadthFirstSearch : MonoBehaviour
         GetTileCollection();
 
         SetHighCostTiles();
-	}
+    }
 
-	void Update ()
+    void Update()
     {
-		if(priorityNodes.Count > 0 && !isPathfindingComplete)
+        if (priorityNodes.Count > 0 && !isPathfindingComplete)
         {
             for (int i = 0; i < maxNodeIterations; i++)
             {
