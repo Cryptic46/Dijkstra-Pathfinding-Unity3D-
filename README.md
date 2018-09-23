@@ -10,3 +10,8 @@ This algorithm is based on One Source, One Destination. Still need to implement 
 
 # 04-09-2018 - Implemented logic for single destination, many sources.
 Will spend the next few days optimizing (where possible) and re-factoring.
+
+# 23-09-2018 - Implemented A* Pathfinding
+Project now has an A* implementation (demonstration is located at "A Star"/Scenes/AStar.unity) and Dijkstra (demonstration is located at Dijkstra/Scenes/SampleScene.unity)
+
+# I am currently working on steering and flocking with the A* implementation
