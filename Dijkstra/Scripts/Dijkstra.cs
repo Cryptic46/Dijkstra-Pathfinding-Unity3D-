@@ -2,12 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-/*
- * Problem: Line 170 - SOLVED
- * 
- * Problem: Run the demo, check node Vector(0.5, 1.5, -0.5)
- */
-
 public class Dijkstra : MonoBehaviour
 {
     //Node collection data
