@@ -8,5 +8,5 @@ Still got a slight issue (possibly bug). Hit play and check Vector(0.5, 1.5, -0.
 Bugs have been fixed.
 This algorithm is based on One Source, One Destination. Still need to implement Many Sources, One Destination.
 
-# 04-09-2018 - Implemented logic for single destination, many sources. Crowd pathfinding is now possible.
+# 04-09-2018 - Implemented logic for single destination, many sources.
 Will spend the next few days optimizing (where possible) and re-factoring.
