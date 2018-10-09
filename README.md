@@ -15,3 +15,5 @@ Will spend the next few days optimizing (where possible) and re-factoring.
 Project now has an A* implementation (demonstration is located at "A Star"/Scenes/AStar.unity) and Dijkstra (demonstration is located at Dijkstra/Scenes/SampleScene.unity)
 
 # I am currently working on steering and flocking with the A* implementation
+
+#Link: https://www.youtube.com/watch?v=TCqNFnJZKww&feature=youtu.be
